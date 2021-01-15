@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+// import axios from 'axios';
 
 import TodoItem from './TodoItem';
 import './style.css';
@@ -36,10 +37,18 @@ class TodoList extends Component {
         )
     }
 
+    // componentDidMount() {
+    //     axios.get('https://jsonplaceholder.typicode.com/posts')
+    //         .then((response)=>{
+    //             this.setState({list: [...response.data]});
+    //         })
+    //         .catch(()=>{alert('error')})
+    // }
+
     getTodoItem() {
         return this.state.list.map((item, index)=>{
             return <TodoItem 
-                        key={index}
+                        key={item}
                         item={item}
                         index={index}
                         deleteItem={this.handleItemDelete}/>

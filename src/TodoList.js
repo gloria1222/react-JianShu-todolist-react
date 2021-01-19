@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 // import axios from 'axios';
 
 import TodoItem from './TodoItem';
+import App from './App';
 import './style.css';
 
 class TodoList extends Component {
@@ -20,6 +21,7 @@ class TodoList extends Component {
     render() {
         return (
             <Fragment>
+                <App/>
                 <div>
                     <label htmlFor="insertArea">输入内容</label>
                     <input 
